@@ -8,6 +8,13 @@
     <p>Welcome to my first website.</p>
     <h2>Web Security</h2>
     <p id="web-security-question">How would you advise a potential client to secure his/her website from web security attacks? Note: the word count for your answer should not be greater than 250 words</p>
-    <p id="web-security-answer">[Answer here]</p>
+    <div id="web-security-answer"><p>As stated in the MDN Article: “The single most important lesson you can learn about website security is to never trust data from the browser”. The greatest advice would therefore be to sanitize all incoming data from the user.</p>
+
+        <p>Sanitization of data means to have a system in place that makes sure no malicious data can enter into our systems. In practice, formatting all incoming data in such a way that it will not be harmful - for instance by escaping special characters, such that they will be read as strings by the server, or by not allowing certain HTML elements- so that the server will not execute unintended code.</p>
+        
+        <p>Sanitization of data is effective because it can prevent a range of different attacks, such as Cross-site scripting (XSS), SQL injections, Directory traversal, File inclusion and Command injection. It is, however, not a catch-all solution. Cross-site request forgery, or XSRF, is an attack where the user is tricked into performing an unintended action - for instance by pressing a button that says one thing, but does another - as the attacker tries to take advantage of the HTTP POST request sent by the user when pressing the button. To secure against such attacks the server should require that POST requests include a site-generated secret which is specific for each user.</p>
+        
+        <p>There are many considerations that should be taken in the process of securing your website, and ideally everyone working on the project should do their part to keep the site secure.
+        </p></div>
   </body>
 </html>
